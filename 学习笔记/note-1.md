@@ -3,10 +3,10 @@
   解决：换成ssh方式即可
   
   步骤：
-    a.先查看当前的方式 git remote -v
-    b.把http方式改为ssh方式。先移除旧的http的origin: git remote rm origin
-    c.再添加新的ssh方式的origin: git remote add origin git@github.com:xxxxxxxxxxxx.git
-    d.查看有没有修改成功 git remote -v
+    --a.先查看当前的方式 git remote -v
+    --b.把http方式改为ssh方式。先移除旧的http的origin: git remote rm origin
+    --c.再添加新的ssh方式的origin: git remote add origin git@github.com:xxxxxxxxxxxx.git
+    --d.查看有没有修改成功 git remote -v
 
   改动完之后直接执行git push是无法推送代码的，需要设置一下上游要跟踪的分支，与此同时会自动执行一次git push命令，此时已经不用要求输入用户名及密码啦！
   
@@ -33,7 +33,7 @@
   解决：在本地创建SSH key，然后将生成的SSH key文件内容添加到github帐号上去
 
   步骤：
-    a.首先利用本机安装的Git创建SSH key，执行如下命令就可以ssh-keygen -t rsa -C "your_email@example.com"，然后系统提示输入文件保存位置等信息，连续敲三次回车即可，生成的SSH key文件保存在中～/.ssh/id_rsa.pub
+    --a.首先利用本机安装的Git创建SSH key，执行如下命令就可以ssh-keygen -t rsa -C "your_email@example.com"，然后系统提示输入文件保存位置等信息，连续敲三次回车即可，生成的SSH key文件保存在中～/.ssh/id_rsa.pub
     b.然后用”cat命令”打开该文件：cat ~/.ssh/id_rsa.pub
     c.拷贝.ssh/id_rsa.pub文件内的内容，将它粘帖到github帐号管理中的添加SSH key界面中
     d.头像右边的箭头，点击后找到settings，在左边的导航栏里选择 SSH key，点击 Add SSH key 

@@ -3,10 +3,10 @@
   解决：换成ssh方式即可
   
   步骤：
-    -a.先查看当前的方式 git remote -v
-    -b.把http方式改为ssh方式。先移除旧的http的origin: git remote rm origin
-    -c.再添加新的ssh方式的origin: git remote add origin git@github.com:xxxxxxxxxxxx.git
-    -d.查看有没有修改成功 git remote -v
+    a. 先查看当前的方式 git remote -v
+    b. 把http方式改为ssh方式。先移除旧的http的origin: git remote rm origin
+    c. 再添加新的ssh方式的origin: git remote add origin git@github.com:xxxxxxxxxxxx.git
+    d. 查看有没有修改成功 git remote -v
 
   改动完之后直接执行git push是无法推送代码的，需要设置一下上游要跟踪的分支，与此同时会自动执行一次git push命令，此时已经不用要求输入用户名及密码啦！
   

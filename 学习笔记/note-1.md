@@ -2,7 +2,7 @@
   原因：出现这种情况的原因是我们使用了http的方式clone代码到本地，相应的，也是使用http的方式将代码push到服务器
   解决：换成ssh方式即可
   
-  步骤：
+    步骤：
     1. 先查看当前的方式 git remote -v
     2. 把http方式改为ssh方式。先移除旧的http的origin: git remote rm origin
     3. 再添加新的ssh方式的origin: git remote add origin git@github.com:xxxxxxxxxxxx.git
@@ -24,7 +24,7 @@
 
   这个意思是：当前分支没有与远程分支关联，因此导致了提交代码失败
 
-  解决方案有两种：
+    解决方案有两种：
     1. 直接 git push origin master 推向指定的分支，最强暴的方法。
     2. 正如上面所说关联远程分支，执行git push --set-upstream origin master，这样关联的好处是以后就不用每次git push 分支名
 
@@ -32,7 +32,7 @@
   原因：使用ssh的方式链接git服务器，需要使用SSH密钥，这样无需每次都要输入用户名和密码
   解决：在本地创建SSH key，然后将生成的SSH key文件内容添加到github帐号上去
 
-  步骤：
+    步骤：
     1. 首先利用本机安装的Git创建SSH key，执行如下命令就可以ssh-keygen -t rsa -C "your_email@example.com"，然后系统提示输入文件保存位置等信息，连续敲三次回车即可，生成的SSH key文件保存在中～/.ssh/id_rsa.pub
     2. 然后用”cat命令”打开该文件：cat ~/.ssh/id_rsa.pub
     3. 拷贝.ssh/id_rsa.pub文件内的内容，将它粘帖到github帐号管理中的添加SSH key界面中

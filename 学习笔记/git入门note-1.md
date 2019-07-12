@@ -1,4 +1,4 @@
-#git基本使用
+# git基本使用
 
 git 仓库创建后，会得到两个仓库地址，两个地址的区别是一个使用 https，另一个使用 ssh 协议。两者的区别是：
 
@@ -8,7 +8,7 @@ git 仓库创建后，会得到两个仓库地址，两个地址的区别是一�
     1. https 用443端口，可以对 repo 根据权限进行读写，只要有账号密码就可进行操作。<br>
     2. ssh 则用的是22端口，也可以对 repo 根据权限进行读写，但是需要 SSH Keys 授权，这个 key 是通过 ssh key 生成器生成的，然后放在 github 上，作为授权的证据，这样的话就不需要用户名和密码进行授权了。
 
-##如果使用了 https 的方式，怎么切换到 ssh
+## 如果使用了 https 的方式，怎么切换到 ssh
  
     步骤：
     1. 先查看当前的方式 git remote -v
@@ -16,7 +16,7 @@ git 仓库创建后，会得到两个仓库地址，两个地址的区别是一�
     3. 再添加新的 ssh 方式的 origin: git remote add origin git@github.com:xxxxxxxxxxxx.git
     4. 查看有没有修改成功 git remote -v
   
-##直接执行 git pull 命令，就会有下面的提示：
+## 直接执行 git pull 命令，就会有下面的提示：
 
       MacBook-Pro-5:web-crm wangxiao$ git push
       fatal: The current branch wangxiao has no upstream branch.
@@ -29,7 +29,7 @@ git 仓库创建后，会得到两个仓库地址，两个地址的区别是一�
     1. 直接 git push origin master 推向指定的分支，最强暴的方法。
     2. 设置关联远程分支，执行 git push --set-upstream origin master，这样关联的好处是不用指定分支名
 
-##设置SSH密钥
+## 设置SSH密钥
 
     步骤：
     1. 输入 ssh 命令，看电脑是否安装 ssh 协议，如果没有，去网上搜索下载安装

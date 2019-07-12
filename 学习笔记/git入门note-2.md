@@ -1,10 +1,6 @@
 ## git add 命令
 
-在使用 git add . 添加文件的时候，bash 会提示 “warning: LF will be replaced by CRLF in xxxx”，这是因为不同操作系统所使用的换行符不一致导致的。
-三大主流操作系统的换行符：
-Uinx/Linux采用换行符LF表示下一行（LF：LineFeed，中文意思是换行）；
-Dos和Windows采用回车+换行CRLF表示下一行（CRLF：CarriageReturn LineFeed，中文意思是回车换行）；
-Mac OS采用回车CR表示下一行（CR：CarriageReturn，中文意思是回车）。
+在使用 git add . 添加文件的时候，bash 会提示 “warning: LF will be replaced by CRLF in xxxx”，这是因为不同操作系统所使用的换行符不一致导致的。<br>三大主流操作系统的换行符：<br>Uinx/Linux采用换行符LF表示下一行（LF：LineFeed，中文意思是换行）；<br>Dos和Windows采用回车+换行CRLF表示下一行（CRLF：CarriageReturn LineFeed，中文意思是回车换行）；<br>Mac OS采用回车CR表示下一行（CR：CarriageReturn，中文意思是回车）。
 
 通过使用 git config core.autocrlf 来显示当前你的Git中采取哪种对待换行符的方式，此命令会有三个输出，“true”，“false”或者“input”
 

@@ -18,3 +18,6 @@
 2.然后对比当前分支相对于该祖先的历次提交，提取相应的修改并存为临时文件；
 3.然后将当前分支指向目标基底 C3；
 4.最后以此将之前另存为临时文件的修改依序应用到master分支
+
+rebase 使用场景，可参考：https://www.jianshu.com/p/f7ed3dd0d2d8
+https://www.jianshu.com/p/39c45f990c99
